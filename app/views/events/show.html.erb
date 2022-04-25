@@ -7,3 +7,17 @@
 
 <h3>Location</h3>
 <p><%= @event.location %></p>
+
+<h3>Attend Event?</h3>
+<%= button_to "Click to attend",
+    event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post)
+%>
+
+<h3>Attendees</h3>
+<ul>
+  <% @event.attendees.each do |att| %>
+    <li>
+      <%= att.name %>
+    </li>
+  <% end %>
+</ul>
