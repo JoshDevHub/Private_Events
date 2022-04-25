@@ -6,7 +6,7 @@ class EventAttendancesController < ApplicationController
   end
 
   def create
-    @event_attendance = current_user.event_attendances.build(event_attendance_params)
+    @event_attendance = current_user.event_attendances.new(event_attendance_params)
 
     if @event_attendance.save
       redirect_to root_path
