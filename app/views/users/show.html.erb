@@ -9,11 +9,20 @@
 <% end %>
 </ul>
 
+<h2>Events Signed Up For</h2>
+<ul>
+  <% @user.attended_events.future.each do |future_event| %>
+    <li>
+      <%= future_event.name %>
+    </li>
+  <% end %>
+</ul>
+
 <h2>Attended Events</h2>
 <ul>
-  <% @user.attended_events.each do |event| %>
+  <% @user.attended_events.past.each do |past_event| %>
     <li>
-      <%= event.name %>
+      <%= past_event.name %>
     </li>
   <% end %>
 </ul>
