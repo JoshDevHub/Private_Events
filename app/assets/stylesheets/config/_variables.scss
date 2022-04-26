@@ -17,8 +17,8 @@
   --font-size-xxxxl: 2.5rem; // 40px
 
   // Text Colors
-  --color-text-header: hsl(0, 1%, 16%);
-  --color-text-body:   hsl(0, 5%, 25%);
+  --color-text-header: hsl(299, 84%, 83%);
+  --color-text-body:   hsl(0, 6%, 93%);
   --color-text-muted:  hsl(0, 1%, 44%);
 
   // Spacing
@@ -34,17 +34,17 @@
   --space-xxxxl: 4rem;   // 64px
 
   // Application colors
-  --color-primary:          hsl(350, 67%, 50%);
-  --color-primary-rotate:   hsl(10, 73%, 54%);
-  --color-primary-bg:       hsl(0, 85%, 96%);
-  --color-secondary:        hsl(101, 45%, 56%);
-  --color-secondary-rotate: hsl(120, 45%, 56%);
-  --color-tertiary:         hsl(49, 89%, 64%);
-  --color-glint:            hsl(210, 100%, 82%);
+  --color-primary:          hsl(266, 71%, 73%);
+  // --color-primary-rotate:   hsl(10, 73%, 54%);
+  // --color-primary-bg:       hsl(0, 0%, 7%);
+  // --color-primary-bg:       hsl(0, 85%, 96%);
+  --color-secondary:        hsl(230, 70%, 82%);
+  // --color-secondary-rotate: hsl(120, 45%, 56%);
+  --color-tertiary:         hsl(299, 84%, 83%);
 
   // Neutral colors
   --color-white:      hsl(0, 0%, 100%);
-  --color-background: hsl(30, 50%, 98%);
+  --color-background: hsl(0, 0%, 7%);
   --color-light:      hsl(0, 6%, 93%);
   --color-dark:       var(--color-text-header);
 
