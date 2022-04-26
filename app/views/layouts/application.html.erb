@@ -19,13 +19,32 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
-    <% if user_signed_in? %>
-      <%= link_to current_user.name, user_path(current_user.id) %>
-      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign-Up", new_user_registration_path %>
-      <%= link_to "Sign-In", new_user_session_path %>
-    <% end %>
+    <header>
+      <h2>Private Events</h2>
+      <nav>
+        <ul>
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to "Create New Event", new_event_path %>
+            </li>
+            <li>
+              <%= link_to current_user.name, user_path(current_user.id) %>
+            </li>
+            <li>
+              <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Sign-In", new_user_session_path %>
+            </li>
+            <li>
+              <%= link_to "Sign-Up", new_user_registration_path %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>
