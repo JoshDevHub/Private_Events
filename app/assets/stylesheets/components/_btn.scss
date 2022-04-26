@@ -1,0 +1,45 @@
+.btn {
+  display: inline-block;
+  color: var(--color-dark);
+  padding: var(--space-xxs) var(--space-m);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  border: solid 2px transparent;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: filter 400ms, color 200ms;
+
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:active {
+    background-color: transparent;
+    transition: filter 250ms, color 200ms;
+  }
+
+  &--primary {
+    background-color: var(--color-primary);
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      border-color: var(--color-primary);
+      color: var(--color-text-body);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--color-secondary);
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
+    }
+  }
+}
