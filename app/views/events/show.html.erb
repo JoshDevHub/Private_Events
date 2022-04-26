@@ -10,7 +10,8 @@
 
 <h3>Attend Event?</h3>
 <%= button_to "Click to attend",
-    event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post)
+    event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
+    class: "btn btn--secondary"
 %>
 
 <h3>Attendees</h3>
