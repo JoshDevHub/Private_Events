@@ -1,9 +1,16 @@
 .header {
+  align-items: center;
   box-shadow: var(--shadow-small);
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--space-m);
   padding: var(--space-m);
+
+  &__home-link {
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
   &__nav-links {
     align-items: center;
