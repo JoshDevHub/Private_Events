@@ -1,0 +1,13 @@
+.header {
+  box-shadow: var(--shadow-small);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-m);
+  padding: var(--space-m);
+
+  &__nav-links {
+    align-items: center;
+    display: flex;
+    gap: var(--space-l);
+  }
+}
