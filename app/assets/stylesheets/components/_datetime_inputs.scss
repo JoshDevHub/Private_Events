@@ -1,0 +1,20 @@
+.date-fieldset {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--space-m);
+  row-gap: var(--space-xxs);
+  margin-bottom: var(--space-m);
+
+  &__legend {
+    color: var(--color-tertiary);
+    margin: 0 auto;
+    font-weight: bold;
+    margin-bottom: var(--space-s);
+  }
+
+  &__label {
+    color: var(--color-secondary);
+  }
+}
