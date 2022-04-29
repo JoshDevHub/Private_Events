@@ -1,19 +1,11 @@
-<h1>All Events</h1>
+<h1 class="main-header">All Events</h1>
 
-<h2>Upcoming Events</h2>
-<ul>
-  <% @events.future.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
-  <% end %>
-</ul>
+<h2 class="event-temporal-header">Upcoming Events</h2>
+<div class="events-container">
+  <%= render @events.future %>
+</div>
 
-<h2>Past Events</h2>
-<ul>
-  <% @events.past.each do |event| %>
-    <li>
-      <%= link_to event.name, event %>
-    </li>
-  <% end %>
-</ul>
+<h2 class="event-temporal-header">Past Events</h2>
+<div class="events-container">
+  <%= render @events.past %>
+</div>
