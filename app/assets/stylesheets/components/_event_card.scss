@@ -8,4 +8,25 @@
     font-size: var(--font-size-xl);
     text-decoration: underline;
   }
+
+  &__heading {
+    margin-bottom: var(--space-xxs);
+  }
+
+  &__metadata {
+    &--top {
+      margin-bottom: var(--space-m);
+    }
+  }
+
+  &__description {
+    margin-bottom: var(--space-l);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    justify-content: flex-end;
+  }
 }
