@@ -27,6 +27,7 @@
 
   & input, textarea, select {
     padding: var(--space-xs);
+    border-radius: var(--border-radius);
 
     &:focus {
       outline: solid 2px var(--color-secondary);

@@ -1,12 +1,13 @@
-<h1><%= @event.name %></h1>
+<h1 class="main-header"><%= @event.name %></h1>
 
-<h2>Created by: <%= @event.creator.name %> </h2>
+<ul class="event-metadata">
+  <li>Created by: <%= link_to @event.creator.name, @event.creator %></li>
+  <li>Date: <%= @event.date %></li>
+  <li>Location: <%= @event.location %></li>
+</ul>
 
-<h3>Data</h3>
-<p><%= @event.date %></p>
-
-<h3>Location</h3>
-<p><%= @event.location %></p>
+<h3>Description</h3>
+<p><%= @event.description %></p>
 
 <h3>Attend Event?</h3>
 <%= button_to "Click to attend",
