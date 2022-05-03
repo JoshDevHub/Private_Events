@@ -7,7 +7,7 @@
     <p class="event-card__description"><%= @event.description %></p>
     <div class="event-card__actions">
       <h4>Would you like to attend?</h4>
-      <%= button_to "Click to attend",
+      <%= button_to "Click Here!",
           event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
           class: "btn btn--secondary"
       %>
