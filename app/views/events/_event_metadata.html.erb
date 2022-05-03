@@ -1,13 +1,13 @@
 <ul class="event-card__metadata--<%= class_modifier %> event-metadata">
-  <li>
+  <li class="event-metadata__item">
     <span class="event-metadata__label">Hosted by: </span>
     <%= link_to event.creator.name, event.creator %>
   </li>
-  <li>
+  <li class="event-metadata__item">
     <span class="event-metadata__label">Date: </span>
     <%= event.date.strftime("%d/%m/%Y %I:%M %p") %>
   </li>
-  <li>
+  <li class="event-metadata__item">
     <span class="event-metadata__label">Location: </span>
     <%= event.location %>
   </li>

@@ -1,15 +1,11 @@
 .event-metadata {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-flow: column;
   gap: var(--space-m);
 
   &__label {
     color: var(--color-secondary);
     font-weight: bold;
-  }
-
-  & li+li {
-    border-left: var(--border);
-    padding-left: var(--space-m);
   }
 }
