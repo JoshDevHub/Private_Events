@@ -1,0 +1,42 @@
+<%= form_with model: event, html: { class: "form" } do |form| %>
+  <div class="form__field">
+    <%= form.label :name, class: "form__label" %>
+    <%= form.text_field :name, class: "form__name" %>
+  </div>
+
+  <div class="form__field">
+    <%= form.label :location, class: "form__label" %>
+    <%= form.text_field :location, class: "form__name" %>
+  </div>
+
+  <div class="form__field">
+    <%= form.label :description, class: "form__label" %>
+    <%= form.text_area :description, class: "form__textarea" %>
+  </div>
+
+  <fieldset class="date-fieldset">
+    <legend class="date-fieldset__legend">Date</legend>
+
+    <%= form.label :date_1i, "Choose year:", class: "date-fieldset__label" %>
+    <%= select_year Date.today, field_name: "date(1i)", prefix: "event" %>
+
+    <%= form.label :date_2i, "Choose month:", class: "date-fieldset__label" %>
+    <%= select_month Date.today, field_name: "date(2i)", prefix: "event" %>
+
+    <%= form.label :date_3i, "Choose day:", class: "date-fieldset__label" %>
+    <%= select_day Date.today, field_name: "date(3i)", prefix: "event" %>
+  </fieldset>
+
+  <fieldset class="date-fieldset">
+    <legend class="date-fieldset__legend">Time</legend>
+    <%= form.label :date_4i, "Choose hour:", class: "date-fieldset__label" %>
+    <%= select_hour Time.now, field_name: "date(4i)", prefix: "event", ampm: true %>
+
+    <%= form.label :date_5i, "Choose minute:", class: "date-fieldset__label" %>
+    <%= select_minute Time.now, field_name: "date(5i)", prefix: "event", minute_step: 15 %>
+  </fieldset>
+
+  <div class="form__actions">
+    <%= form.submit class: "btn btn--secondary" %>
+  </div>
+<% end %>
