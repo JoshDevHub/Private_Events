@@ -1,0 +1,10 @@
+.event-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    margin-bottom: var(--space-xxs);
+  }
+}

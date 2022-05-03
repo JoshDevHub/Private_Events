@@ -1,28 +1,41 @@
-<h1><%= @user.name %></h1>
+<main class="container">
+  <h1 class="container__heading"><%= @user.name %>'s Events</h1>
 
-<h2>Events</h2>
-<ul>
-<% @user.events.each do |event| %>
-  <li>
-    <%= event.name %>
-  </li>
-<% end %>
-</ul>
+  <div class="event-card">
+    <h2 class="event-card__heading">Hosted Events</h2>
+    <ul class="event-list">
+    <% @user.events.each do |event| %>
+      <li class="event-list__item">
+        <%= link_to event.name, event %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 
-<h2>Events Signed Up For</h2>
-<ul>
-  <% @user.attended_events.future.each do |future_event| %>
-    <li>
-      <%= future_event.name %>
-    </li>
+  <% unless @user.attended_events.future.blank? %>
+    <div class="event-card">
+      <h2 class="event-card__heading">Events Signed Up For</h2>
+      <ul class="event-list">
+        <% @user.attended_events.future.each do |future_event| %>
+          <li class="event-list__item">
+            <%= future_event.name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-</ul>
 
-<h2>Attended Events</h2>
-<ul>
-  <% @user.attended_events.past.each do |past_event| %>
-    <li>
-      <%= past_event.name %>
-    </li>
+  <% unless @user.attended_events.past.blank? %>
+    <div class="event-card">
+      <h2 class="event-card__heading">Attended Events</h2>
+      <ul class="event-list">
+        <% @user.attended_events.past.each do |past_event| %>
+          <li class="event-list__item">
+            <%= past_event.name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
-</ul>
+  
+</main>
