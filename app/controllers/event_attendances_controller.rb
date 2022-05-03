@@ -9,7 +9,7 @@ class EventAttendancesController < ApplicationController
     @event_attendance = current_user.event_attendances.new(event_attendance_params)
 
     if @event_attendance.save
-      redirect_to root_path
+      redirect_to event_path(@event_attendance.attended_event_id)
     else
       render :new, status: :unprocessable_entity
     end
