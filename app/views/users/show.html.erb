@@ -1,8 +1,8 @@
 <main class="container">
   <h1 class="container__heading"><%= @user.name %>'s Events</h1>
 
-  <div class="event-card">
-    <h2 class="event-card__heading">Hosted Events</h2>
+  <div class="card">
+    <h2 class="card__heading">Hosted Events</h2>
     <ul class="event-list">
     <% @user.events.each do |event| %>
       <li class="event-list__item">
@@ -13,8 +13,8 @@
   </div>
 
   <% unless @user.attended_events.future.blank? %>
-    <div class="event-card">
-      <h2 class="event-card__heading">Events Signed Up For</h2>
+    <div class="card">
+      <h2 class="card__heading">Events Signed Up For</h2>
       <ul class="event-list">
         <% @user.attended_events.future.each do |future_event| %>
           <li class="event-list__item">
@@ -26,8 +26,8 @@
   <% end %>
 
   <% unless @user.attended_events.past.blank? %>
-    <div class="event-card">
-      <h2 class="event-card__heading">Attended Events</h2>
+    <div class="card">
+      <h2 class="card__heading">Attended Events</h2>
       <ul class="event-list">
         <% @user.attended_events.past.each do |past_event| %>
           <li class="event-list__item">
@@ -37,5 +37,5 @@
       </ul>
     </div>
   <% end %>
-  
+
 </main>
