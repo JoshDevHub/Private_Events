@@ -7,8 +7,12 @@
     <p class="event-card__description"><%= @event.description %></p>
     <div class="event-card__actions">
       <% if current_user == @event.creator %>
-        <%= link_to "Edit", edit_event_path(@event) %>
-        <%= button_to "Delete" %>
+        <%= link_to "Edit", edit_event_path(@event), class: "btn btn--secondary" %>
+        <%= link_to "Cancel",
+            event_path(@event),
+            data: { turbo_method: :delete,
+                    turbo_confirm: "Are you sure you want to cancel this event?" },
+            class: "btn btn--secondary" %>
       <% else %>
         <h4>Would you like to attend?</h4>
         <%= button_to "Click Here!",
