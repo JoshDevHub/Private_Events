@@ -35,7 +35,8 @@
   }
 
   &__textarea {
-    width: 100%;
+    width: max(50%, 15rem);
+    margin: 0 auto;
     height: 200px;
   }
 
@@ -57,5 +58,6 @@
   &__actions {
     display: flex;
     justify-content: center;
+    margin-bottom: var(--space-xl);
   }
 }
