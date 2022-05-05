@@ -25,11 +25,6 @@
         <ul class="header__nav-links">
           <% if user_signed_in? %>
             <li>
-              <%= link_to "Create New Event",
-                          new_event_path,
-                          class: "animated-link" %>
-            </li>
-            <li>
               <%= link_to "Your Events",
                           user_path(current_user.id),
                           class: "animated-link" %>
