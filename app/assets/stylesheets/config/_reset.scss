@@ -77,10 +77,12 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color 200ms;
+  transition: border-bottom;
 
   &:hover,
   &:focus,
   &:active {
     color: var(--color-primary-rotate);
+    border-bottom: 2px solid var(--color-tertiary);
   }
 }
