@@ -11,11 +11,19 @@
     font-size: var(--font-size-xxl);
     font-weight: bold;
     text-decoration: underline;
+
+    @include media(tabletAndUp) {
+      margin-left: var(--space-l);
+    }
   }
 
   &__nav-links {
     align-items: center;
     display: flex;
     gap: var(--space-xl);
+
+    @include media(tabletAndUp) {
+      margin-right: var(--space-l);
+    }
   }
 }
