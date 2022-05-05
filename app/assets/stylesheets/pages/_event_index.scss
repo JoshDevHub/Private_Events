@@ -15,8 +15,16 @@
     justify-content: center;
 
     @include media(tabletAndUp) {
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: space-between;
+    }
+
+    & h2 {
+      margin-bottom: var(--space-s);
+
+      @include media(tabletAndUp) {
+        margin-bottom: 0;
+      }
     }
 
     & .btn {
