@@ -26,16 +26,19 @@
           <% if user_signed_in? %>
             <li>
               <%= link_to "Create New Event",
-                          new_event_path %>
+                          new_event_path,
+                          class: "animated-link" %>
             </li>
             <li>
               <%= link_to "Your Events",
-                          user_path(current_user.id) %>
+                          user_path(current_user.id),
+                          class: "animated-link" %>
             </li>
             <li>
               <%= link_to "Logout",
                           destroy_user_session_path,
-                          data: { turbo_method: :delete } %>
+                          data: { turbo_method: :delete },
+                          class: "animated-link" %>
             </li>
           <% else %>
             <li>

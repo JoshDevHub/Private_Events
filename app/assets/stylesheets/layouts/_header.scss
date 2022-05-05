@@ -1,5 +1,6 @@
 .header {
   align-items: center;
+  background-color: hsl(0 0 15);
   box-shadow: var(--shadow-small);
   display: flex;
   justify-content: space-between;
@@ -10,13 +11,6 @@
     font-size: var(--font-size-xxl);
     font-weight: bold;
     text-decoration: underline;
-
-    &:hover,
-    &:focus,
-    &:active {
-      border-bottom: none;
-    }
-
   }
 
   &__nav-links {
