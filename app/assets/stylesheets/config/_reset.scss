@@ -77,12 +77,23 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color 200ms;
-  transition: border-bottom;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 200ms;
+  }
 
   &:hover,
   &:focus,
   &:active {
     color: var(--color-primary-rotate);
-    border-bottom: 2px solid var(--color-tertiary);
+
+    &::after {
+      width: 100%;
+    }
   }
 }
