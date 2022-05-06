@@ -1,0 +1,15 @@
+.flash {
+  text-align: center;
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+  color: var(--color-background);
+  font-weight: bold;
+
+  &--notice {
+    background-color: var(--color-secondary);
+  }
+
+  &--alert {
+    background-color: var(--color-error);
+  }
+}
