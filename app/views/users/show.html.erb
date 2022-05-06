@@ -18,7 +18,7 @@
       <ul class="event-list">
         <% @user.attended_events.future.each do |future_event| %>
           <li class="event-list__item">
-            <%= future_event.name %>
+            <%= link_to future_event.name, future_event %>
           </li>
         <% end %>
       </ul>
@@ -31,7 +31,7 @@
       <ul class="event-list">
         <% @user.attended_events.past.each do |past_event| %>
           <li class="event-list__item">
-            <%= past_event.name %>
+            <%= link_to past_event.name, past_event %>
           </li>
         <% end %>
       </ul>
