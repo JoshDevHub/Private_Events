@@ -6,7 +6,7 @@
     <h3 class="card__heading">Description</h3>
     <p class="card__description"><%= @event.description %></p>
     <div class="card__actions">
-      <% if current_user == @event.creator %>
+      <% if current_user == @event.creator && @event.future? %>
         <%= link_to "Edit", edit_event_path(@event), class: "btn btn--secondary" %>
         <%= link_to "Cancel",
             event_path(@event),
@@ -14,11 +14,13 @@
                     turbo_confirm: "Are you sure you want to cancel this event?" },
             class: "btn btn--secondary" %>
       <% else %>
-        <h4>Would you like to attend?</h4>
-        <%= button_to "Click Here!",
-            event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
-            class: "btn btn--secondary"
-        %>
+        <% if @event.future? %>
+          <h4>Would you like to attend?</h4>
+          <%= button_to "Click Here!",
+              event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
+              class: "btn btn--secondary"
+          %>
+        <% end %>
       <% end %>
     </div>
   </div>

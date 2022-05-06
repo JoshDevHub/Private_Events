@@ -11,4 +11,8 @@ class Event < ApplicationRecord
 
   scope :past, -> { where("date <= ?", Time.current) }
   scope :future, -> { where("date > ?", Time.current) }
+
+  def future?
+    date > Time.current
+  end
 end
