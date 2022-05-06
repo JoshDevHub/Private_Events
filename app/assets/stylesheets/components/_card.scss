@@ -29,4 +29,8 @@
     gap: var(--space-m);
     justify-content: flex-end;
   }
+
+  &__notice {
+    color: var(--color-secondary);
+  }
 }

@@ -15,11 +15,15 @@
             class: "btn btn--secondary" %>
       <% else %>
         <% if @event.future? %>
-          <h4>Would you like to attend?</h4>
-          <%= button_to "Click Here!",
-              event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
-              class: "btn btn--secondary"
-          %>
+          <% if @event.attendees.include?(current_user) %>
+            <p class="card__notice">You're signed up to attend this event!</p>
+          <% else %>
+            <h4>Would you like to attend?</h4>
+            <%= button_to "Click Here!",
+                event_attendances_path(event_attendance: { attended_event_id: @event.id }, method: :post),
+                class: "btn btn--secondary"
+            %>
+          <% end %>
         <% end %>
       <% end %>
     </div>
