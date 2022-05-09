@@ -1,4 +1,14 @@
 <main class="container">
+  <% if @event.errors.any? %>
+    <div class="error">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved</h2>
+    </div>
+    <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <h1>Create New Event</h1>
   <%= render "form", event: @event %>
 </main>
